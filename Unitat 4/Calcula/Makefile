@@ -18,7 +18,7 @@ dist: clean calcula
 	mkdir -p ../dit/usr/bin/calc
 	cp calcula ../dist/usr/bin/calc
 
-.PHONY: targiz
+.PHONY: targz
 targz: clean
 	mkdir -p source
 	cp *.c *.h Makefile source
