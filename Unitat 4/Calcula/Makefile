@@ -7,8 +7,8 @@ calcula: calcula.c calc.o
 calc.o: calc.c calc.h
 	$(Ivan) $(HOLA) -c calc.c -o calc.o
 
-.PHONY: limpia
-limpia:
+.PHONY: clean
+clean:
 	rm -rf calc.o
 	rm calcula
 
@@ -18,7 +18,7 @@ dist: clean calcula
 	mkdir -p ../dit/usr/bin/calc
 	cp calcula ../dist/usr/bin/calc
 
-.PHONY: targz
+.PHONY: targiz
 targz: clean
 	mkdir -p source
 	cp *.c *.h Makefile source
